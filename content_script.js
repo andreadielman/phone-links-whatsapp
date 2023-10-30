@@ -117,6 +117,7 @@ function findTextNodes(node, func) {
 
 // Place a call.
 function call(number) {
+    number = number.toString();
     number = number.replace('+','');
     number = number.replace('-','');
     number = number.replace('(','');
