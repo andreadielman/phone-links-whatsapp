@@ -88,7 +88,7 @@ function createLink(text, number) {
     link.className = phoneLinkClassName;
     link.href = "javascript:void(0);";
     link.title = `WhatsApp Message: ${text}`;
-    link.onclick = () => call(text);
+    link.onclick = () => call(number);
     link.appendChild(document.createTextNode(text));
     return link;
 }
