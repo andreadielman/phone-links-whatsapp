@@ -117,5 +117,5 @@ function findTextNodes(node, func) {
 
 // Place a call.
 function call(number) {
-    window.location.href = "tel: " + number;
+    window.location.href = 'https://web.whatsapp.com/send?phone=' + number;
 }
