@@ -66,7 +66,7 @@ function parseTextNode(node) {
     // Parse a phone number.
     let [matchedText, prefix, leadingChars, areaCode, threeDigit, fourDigit] = match;
     matchedText = matchedText.substr(prefix.length); // Remove prefix (This is a work around for JavaScripts lack of look-behind support).
-    const formattedPhoneNumber = matchedText + areaCode + threeDigit + fourDigit;
+    const formattedPhoneNumber = settings.telLinkFormat.format(matchedText, areaCode, threeDigit, fourDigit);
     const formattedPhoneText = settings.linkTextFormat.format(matchedText, areaCode, threeDigit, fourDigit);
 
     // Split text around phone number.
@@ -117,5 +117,7 @@ function findTextNodes(node, func) {
 
 // Place a call.
 function call(number) {
+    const number2 = number.replace('+','');
+    number2 = number2.replace('-','');
     window.location.href = 'https://web.whatsapp.com/send?phone=' + number;
 }
