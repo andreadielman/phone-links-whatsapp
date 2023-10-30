@@ -66,7 +66,7 @@ function parseTextNode(node) {
     // Parse a phone number.
     let [matchedText, prefix, leadingChars, areaCode, threeDigit, fourDigit] = match;
     matchedText = matchedText.substr(prefix.length); // Remove prefix (This is a work around for JavaScripts lack of look-behind support).
-    const formattedPhoneNumber = settings.telLinkFormat.format(matchedText, areaCode, threeDigit, fourDigit);
+    const formattedPhoneNumber = matchedText + areaCode + threeDigit + fourDigit;
     const formattedPhoneText = settings.linkTextFormat.format(matchedText, areaCode, threeDigit, fourDigit);
 
     // Split text around phone number.
