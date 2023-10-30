@@ -122,5 +122,5 @@ function call(number) {
     number = number.replace('(','');
     number = number.replace(')','');
     number = number.replace(' ','');
-    window.open('https://web.whatsapp.com/send?phone=' + number3, '_blank');
+    window.open('https://web.whatsapp.com/send?phone=' + number, '_blank');
 }
