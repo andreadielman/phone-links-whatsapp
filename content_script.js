@@ -88,7 +88,7 @@ function createLink(text, number) {
     link.className = phoneLinkClassName;
     link.href = "javascript:void(0);";
     link.title = `WhatsApp Message: ${text}`;
-    link.onclick = () => call(number);
+    link.onclick = () => call(text);
     link.appendChild(document.createTextNode(text));
     return link;
 }
@@ -119,5 +119,5 @@ function findTextNodes(node, func) {
 function call(number) {
     const number2 = number.replace('+','');
     const number3 = number2.replace('-','');
-    window.location.href = 'https://web.whatsapp.com/send?phone=' + number3;
+    window.open('https://web.whatsapp.com/send?phone=' + number3, '_blank');
 }
