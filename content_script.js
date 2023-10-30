@@ -118,6 +118,6 @@ function findTextNodes(node, func) {
 // Place a call.
 function call(number) {
     const number2 = number.replace('+','');
-    number2 = number2.replace('-','');
-    window.location.href = 'https://web.whatsapp.com/send?phone=' + number;
+    const number3 = number2.replace('-','');
+    window.location.href = 'https://web.whatsapp.com/send?phone=' + number3;
 }
