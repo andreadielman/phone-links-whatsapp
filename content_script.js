@@ -87,7 +87,7 @@ function createLink(text, number) {
     let link = document.createElement('A');
     link.className = phoneLinkClassName;
     link.href = "javascript:void(0);";
-    link.title = `Call: ${text}`;
+    link.title = `WhatsApp Message: ${text}`;
     link.onclick = () => call(number);
     link.appendChild(document.createTextNode(text));
     return link;
@@ -117,5 +117,5 @@ function findTextNodes(node, func) {
 
 // Place a call.
 function call(number) {
-    window.location.href = number;
+    window.location.href = "tel: " + number;
 }
