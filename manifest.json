@@ -1,9 +1,9 @@
 {
   "update_url": "https://clients2.google.com/service/update2/crx",
-  "name": "Click to Call",
+  "name": "Click to WhatsApp Web Message",
   "version": "2.0.0",
   "manifest_version": 2,
-  "description": "Enables 'Click to Call' by converting phone numbers into clickable links.",
+  "description": "Enables 'Click to Message' by converting phone numbers into clickable WhatsApp links.",
   "browser_specific_settings": {
     "gecko": { "id": "clicktocall@nickiacullo.com" }
   },
